@@ -1,0 +1,522 @@
+@charset "ISO-8859-1";
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Nunito',sans-serif;
+    
+}
+
+/* common elements */
+.btn {
+    margin: -6px 9px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 4px 26px;
+    border: 2px solid rgb(152 152 152 / 98%);
+    border-radius: 30px;
+    font-size: 15px;
+    font-family: "Baloo Bhai 2", cursive;
+  }
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(208, 209, 226);
+}
+@font-face {
+    font-family: chalkfont;
+    src: url(other/chalkfont.ttf);
+  }
+
+/* --------------------------------------------------------------------------------- */
+
+body{
+    width: 100%;
+    height: auto;
+   
+
+}
+h1{
+    line-height: 1.5;
+}
+
+.navbar{
+    width: 150%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem 2.5rem;
+    z-index: 10;
+    color: white;
+    background:transparent
+}
+
+.navbar-logo > a{
+    letter-spacing: 2.5;
+    text-decoration: none;
+    color: white;
+
+}
+
+.navbar-menu{
+	width:500px;
+	position:fixed;
+	right:50px;
+	display:flex;
+	justify-content:space-between;
+}
+
+.navbar-menu>a{
+	color:black;
+	text-decoration:none;
+}
+#login{
+	color:black;
+	
+}
+.meny-toggle{
+	display:none;
+}
+.menu-toggle .bar{
+	width:15px;
+	height:2px;
+	margin:3px auto;
+	transition:all 0.3 ease-in-out;
+	background-color:white;
+	cursor: pointer;
+}
+
+header{
+    width: 100%;
+    height: 80vh;
+    
+    background-image: url(../images/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.header-title{
+    position: absolute;
+    top:7rem;
+    left:3rem;
+    letter-spacing: 3;
+    font-weight: bolder;
+    font-size: 58px;
+    color: white;
+    text-shadow: 4px 2px 0px rgba(0,0,0,0.2);
+}
+.header-title > span{
+    color: #ffe96c;
+}
+
+.search-wrapper{
+    width: 60%;
+    margin: auto;
+    min-width: 300px;
+    height: 3.5rem;
+    position: relative;
+}
+.search-box{
+    width: 100%;
+    position: absolute;
+    background-color: rgb(238, 228, 228);
+    box-shadow: rgba(2,11,20,0.2) 0px 5px 15px;
+    top: -45%;
+    height: 100%;
+    
+}
+.search-card{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0.5rem;
+
+}
+.search-input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+}
+.search-button{
+    width: 200px;
+    background : #ffe96c;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+.filter-box{
+    width: 100%;
+    height: auto;
+    font-size: 0.8rem;
+    width: 60%;
+    min-width: 300px;
+    margin: auto;
+}
+.filter-dropdown{
+    width: 100%;
+    border-bottom: 1px solid rgb(227, 245, 109);
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+
+}
+.filter-select{
+    border: none;
+    padding: 0.2rem;
+
+}
+.filter-select:hover{
+    background-color: rgb(172, 172, 172);
+}
+.filter-chosen{
+    width: 100%;
+    padding: 0.3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.chosen-card{
+    background-color: #ffe96c;
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* new css */
+.job-list{
+    margin: 5%;
+    padding: 1rem;
+    background-color: grey;
+}
+
+.job-card{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: -1rem;
+    min-height: 100px;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    cursor: pointer;
+}
+
+.job-card:hover{
+    box-shadow: rgba(0,0,0,0.1) 0px 4px 12px;
+}
+.job-name {
+    display: flex;
+}
+
+.job-profile {
+    width: 60px;
+    height: 60px;
+    margin: 0.5rem;
+}
+
+.job-detail {
+    padding: 0 10px;
+}
+.job-detail > h4 {
+    color: #0076de;
+    font-size: 0.9rem;
+}
+
+.job-detail > p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.job-label {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.job-label > a {
+    padding: 0 1rem;
+    margin: 0.2rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+.label-a {
+    background-color: yellow;
+}
+
+.label-b {
+    background-color: #0076de;
+}
+
+.label-c {
+    background-color: black;
+}
+
+.job-posted {
+    font-size: 0.8rem;
+}
+
+.job-more {
+    display: block;
+    padding: 0.3rem 2rem;
+    margin: 20px auto;
+    width: 250px;
+    background-color: transparent;
+    color: #0076de;
+    border: 1px solid #0076de;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.job-more:hover {
+    background-color: #0076de;
+    color: white;
+}
+.join {
+    width: 100%;
+    height: 350px;
+    /*Add image  */
+    background-image: url(../images/join.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    align-items: center;
+    position: relative;
+}
+.join::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right :0;
+    bottom: 0;
+    background: linear-gradient(180deg , rgb(9 9 5 / 60%) 0% , rgb(255 224 0 / 50%) 100%), linear-gradient(180deg, rgb(255 224 0 / 65%) 0%, transparent 100%);
+    z-index: 1;
+}
+.join-detail {
+    min-width: 280px;
+    width: 50%;
+    z-index: 2;
+    margin-bottom: 1rem;
+}
+.join-detail > h1 {
+    font-size: 36px;
+    letter-spacing: 2;
+}
+.join-button {
+    width: 200px;
+    padding: 1rem;
+    border: none;
+    color: black;
+    background-color: yellow;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    z-index : 2 ;
+    cursor:pointer;
+}
+.join-button:hover {
+    background: transparent;
+    border: 2px solid yellow;
+    color: yellow;
+}
+/* Featured companies */
+body{
+	background: #eeeff4;
+}
+
+.wrapper .header{
+	width: 100%;
+	height: 50px;
+	background: #a9b700;
+	color: #fff;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-weight: 900;
+}
+
+.cards_wrap{
+	padding: 20px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.cards_wrap .card_item{
+	padding: 15px 25px;
+	width: 26%;
+}
+
+.cards_wrap .card_inner{
+	background: #fff;
+	border-radius: 5px;
+	padding: 35px 20px;
+	min-width: 225px;
+	min-height: 315px;
+	max-height: 370px;
+	width: 100%;
+}
+
+.cards_wrap .card_item img{
+	width: 202px;
+    height: 128px;
+	margin-bottom: 5px;
+	align-items:center;
+}
+
+.cards_wrap .card_item .role_name{
+	color: #e36686;
+	font-weight: 900;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: 20px;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cards_wrap .card_item .real_name{
+	color: #b6c0c2;
+	font-size: 12px;
+	font-weight: 100;
+	margin: 5px 0 10px;
+}
+
+.cards_wrap .card_item .time{
+	font-size: 14px;
+	line-height: 24px;
+	color: #7b8ca0;
+}
+
+@media screen and (max-width: 1024px){
+	.cards_wrap .card_item{
+		width: 33%;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.cards_wrap .card_item{
+		width: 50%;
+	}
+	.wrapper .header{
+		font-size: 16px;
+		height: 60px;
+	}
+}
+
+@media screen and (max-width: 568px){
+	.cards_wrap .card_item{
+		width: 100%;
+	}
+	.wrapper .header{
+		font-size: 14px;
+	}
+}
+
+/* form */
+
+.container {
+    
+
+    font-family: chalkfont;
+    border: 3px solid rgb(252, 255, 253);
+    border-radius: 28px;
+    color: white;
+    margin: 90px 60px;
+    padding: 50px;
+
+    background-image: url(../images/image2.jpg);
+    background-repeat: no-repeat;
+    width: 670px;
+    background-size: 1000px;
+  }
+  .container h3 {
+    text-align: center;
+    font-family: chalkfont;
+  }
+  .form-group{
+    font-family: chalkfont;
+  }
+
+  .form-group input {
+    text-align: center;
+    display: block;
+    width: 274px;
+    padding: 5px;
+    border: 2px solid white;
+    border-radius: 6px;
+    margin: 5px auto;
+    font-family: "Baloo Bhai 2", cursive;
+  }
+  #register {
+    font-family: chalkfont;
+    display: block;
+    width: 150px;
+    text-align: center;
+    margin: auto;
+  }
+  #register:hover {
+    background-color: rgb(121, 121, 119);
+  }
+  .inline {
+    display: inline;
+  }
+  #width {
+    width: 66px;
+    margin-left: 520px;
+  }
+  #myquali {
+    border-radius: 6px;
+    margin-left: 131px;
+  }
+
+  #admin_title{
+    text-align: center;
+  }
+
+
+  @media only screen and(max-width=1040){
+    .navbar{
+        flex-direction: column ;
+
+    }
+    .navbar-right{
+        flex-direction: column ;
+    }
+    .navbar-left{
+        flex-direction: column;
+    }
+  }
+  
+  .already_reg{
+  	text-decoration:none;
+  	color:white;
+  	}
+   .already_reg a{
+  	text-align:center;
+  	}
+   #already_reg:hover{
+  	color:blue;
+  	}
+    /* 1040 x 663 */
+  
